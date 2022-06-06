@@ -1,0 +1,19 @@
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Nanum Gothic", sans-serif;
+  line-height: 1.4;
+}
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+header .content {
+  max-width: 1270px;
+  margin: 0 auto; /*좌우만*/
+  background-color: orange;
+}
+
+header .logo {
+}
