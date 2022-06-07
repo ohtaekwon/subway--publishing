@@ -5,15 +5,175 @@ body {
   font-family: "Nanum Gothic", sans-serif;
   line-height: 1.4;
 }
+img {
+  display: block; /* 이미지를 글자취급이 아닌, 상자 취급 */
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none; /* 모든 a테그에 밑줄 제거 */
+}
 /* HEADER */
 header {
-  background-color: royalblue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  border-top: 5px solid rgb(0, 146, 35);
+  border-bottom: 1px solid #c8c8c8;
 }
 header .content {
   max-width: 1270px;
-  margin: 0 auto; /*좌우만*/
-  background-color: orange;
+  height: 170px;
+  margin: 0 auto; /*좌우만 가운데 정렬*/
+  position: relative;
 }
 
 header .logo {
+  /* 가운데 중앙 정렬 */
+  /* 단 정확한 너비를 지정해줘야한다. */
+  width: 201.99px;
+  height: 40px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* display: none; */
+}
+
+header .sub-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  right: 0;
+  display: flex;
+}
+
+header .sub-menu ul.menu {
+  font-family: sans-serif;
+  display: flex;
+}
+
+header .sub-menu ul.menu li {
+  position: relative; /* 부모요소 기준 */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu ul.menu li::before {
+  background-color: #ddd;
+  content: "";
+  display: block;
+  border-radius: 50px;
+  position: absolute; /* 부모요소 기준 배치 */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 3px;
+  height: 3px;
+}
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li:last-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  font-size: 13px;
+  padding: 10px 15px;
+  display: block;
+  color: #666666;
+  font-weight: normal;
+  line-height: 30px;
+  height: 30px;
+}
+header .sub-menu ul.menu li a.material-icons {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  left: 50;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+  /* background-color: red; */
+  height: 34px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px; /* 상하 좌우 */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  /* 전환 효과 : 기본값 all */
+  font-size: 13px;
+  transition: width 0.4s;
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: rgb(0, 146, 35);
+}
+
+header .sub-menu .search .material-icons {
+  /* 수직 가운데 정렬 */
+  height: 24px;
+  position: absolute; /* 부모요소 search */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 5px;
+  /* 전환 효과 */
+  transition: 0.4s;
+}
+header .sub-menu .search.focused .material-icons {
+  opacity: 0; /* 아이콘 안보이기 */
+}
+
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  right: 90px;
+  margin: auto 0;
+  z-index: 1;
+  display: flex;
+  text-align: center;
+}
+
+header .main-menu .item {
+}
+
+header .main-menu .item .item__name {
+  padding: 10px 50px 10px 50px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #292929;
+  font-weight: bold;
+}
+
+header .main-menu .item:hover .item__name {
+  color: #009223;
+}
+header .main-menu .item .item__contents {
 }
