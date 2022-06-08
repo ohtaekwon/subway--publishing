@@ -14,20 +14,59 @@ ul {
 a {
   text-decoration: none; /* 모든 a테그에 밑줄 제거 */
 }
+.content {
+  max-width: 1270px;
+  margin: 0 auto; /*좌우만 가운데 정렬*/
+  position: relative;
+}
+/* SKIP */
+.skip {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+  z-index: 9;
+}
+.skip:focus {
+  top: 0;
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
 /* HEADER */
 header {
   position: fixed;
   width: 100%;
+  left: 0;
   top: 0;
   background-color: #fff;
   border-top: 5px solid rgb(0, 146, 35);
-  border-bottom: 1px solid #c8c8c8;
+  /* border-bottom: 1px solid #c8c8c8; */
 }
-header .content {
-  max-width: 1270px;
-  height: 170px;
-  margin: 0 auto; /*좌우만 가운데 정렬*/
-  position: relative;
+header > .content {
+  height: 200px;
 }
 
 header .logo {
@@ -50,7 +89,6 @@ header .sub-menu {
   top: 0;
   bottom: 0;
   margin: auto;
-
   right: 0;
   display: flex;
 }
@@ -150,30 +188,230 @@ header .sub-menu .search.focused .material-icons {
   opacity: 0; /* 아이콘 안보이기 */
 }
 
-header .main-menu {
+header #lnb {
   position: absolute;
+  left: 0;
   bottom: 0;
-  left: 90px;
-  right: 90px;
-  margin: auto 0;
-  z-index: 1;
-  display: flex;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 9;
+}
+header #lnb nav {
+  border-bottom: 1px solid #c8c8c8;
   text-align: center;
+  font-size: 0;
+  position: relative;
+  z-index: 9;
+}
+header #lnb nav > ul {
+  margin-bottom: -1px;
+  display: inline-block;
+  overflow: hidden;
+}
+header #lnb nav + div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  z-index: 3;
+  transition: 0.5s;
+  opacity: 0;
+  background-color: #fff;
+  /* margin-left: -1000px; */
+}
+header #lnb nav + div .on {
+  /* position: relative; */
+  width: 5000px;
+  height: 100%;
+  background-color: #fff;
+  margin-left: calc(-3000px / 2);
+  z-index: 2;
 }
 
-header .main-menu .item {
+header #lnb nav > ul:hover {
+  overflow: visible;
 }
-
-header .main-menu .item .item__name {
-  padding: 10px 50px 10px 50px;
-  font-family: sans-serif;
+header #lnb nav:hover + div {
+  height: 330px;
+  opacity: 1;
+}
+header #lnb nav + div::after {
+  content: "";
+  position: absolute;
+  width: 5000px;
+  height: 2px;
+  background-color: #c6c6c6;
+  left: -100%;
+  bottom: 0px;
+  transition: 0.9s;
+  z-index: 9;
+}
+header #lnb nav > ul:hover ul {
+  display: block;
+  opacity: 1;
+}
+header #lnb nav > ul > li {
+  display: inline-block;
+  position: relative;
+  left: -50px;
+}
+header #lnb nav > ul > li > a {
+  display: block;
+  position: relative;
+  width: 165px;
+  height: 60px;
   font-size: 18px;
-  color: #292929;
-  font-weight: bold;
+  font-weight: 900;
+  color: #000;
+  line-height: 60px;
+  /*   line-height: 69px; */
+}
+header #lnb nav > ul > li > a:hover {
+  color: rgb(0, 146, 35);
+}
+header #lnb nav > ul > li > a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgb(0, 146, 35);
+  left: 50%;
+  bottom: 0;
+  transition: 0.5s;
+}
+header #lnb nav > ul > li:hover > a:after {
+  width: 100%;
+  left: 0;
+}
+header #lnb nav > ul ul {
+  position: absolute;
+  /* display: none; */
+  width: 100%;
+  text-align: center;
+  padding: 22px 0;
+  opacity: 0;
+  transition: 0.7s;
+  height: 230px;
 }
 
-header .main-menu .item:hover .item__name {
-  color: #009223;
+header #lnb nav > ul ul li {
+  line-height: 30px;
 }
-header .main-menu .item .item__contents {
+
+header #lnb nav > ul ul a {
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  transition: 0.7s;
+}
+header #lnb nav > ul ul a:hover {
+  color: rgb(0, 146, 35);
+  font-weight: 500;
+  /* text-decoration: underline; */
+}
+header #lnb nav > ul ul a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: rgb(0, 146, 35);
+  left: 50%;
+  bottom: -7px;
+  transition: 0.5s;
+}
+header #lnb nav > ul ul a:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.promotions {
+  position: relative;
+  margin-top: 205px;
+  /* background-color: red; */
+  /* background-position: center; */
+  height: 500px;
+  z-index: 0;
+}
+
+.promotions .swiper-container {
+  width: 1920px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1920px / 2);
+  box-sizing: border-box;
+}
+
+.promotions .swiper-slide {
+  opacity: 0;
+  transition: opacity 1s;
+  /* position: relative; */
+}
+.promotions .swiper-slide-active {
+  opacity: 1;
+}
+.promotions .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+.promotions .swiper-pagination .swiper-pagination-bullet {
+  /* background-image: url("./image/promotion_slide_pager.png"); */
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  /* outline: none; */
+}
+.promotions .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.promotions .swiper-pagination .swiper-pagination-bullet-active {
+  width: 20px;
+  height: 12;
+  background-color: rgb(255, 195, 0);
+  border-radius: 30px;
+}
+.promotions .swiper-prev {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 300px;
+  margin: auto;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.promotions .swiper-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 300px;
+  margin: auto;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.promotions .swiper-prev:hover,
+.promotions .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
 }

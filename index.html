@@ -5,18 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SUBWAY</title>
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
     <!-- icon -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- MAIN.CSS -->
     <link rel="stylesheet" href="./main.css" />
     <!-- MAIN.JS -->
     <script defer src="./js/main.js"></script>
   </head>
   <body>
+    <a href="#content" class="skip">바로바기</a>
+
     <!-- HEADER -->
     <header>
       <div class="content">
@@ -41,33 +53,193 @@
             <div class="material-icons">search</div>
           </div>
         </div>
-        <ul class="main-menu">
+        <!-- <ul class="main-menu">
           <li class="item">
             <div class="item__name">메뉴소개</div>
-            <div class="item__contents"></div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="content">
+                  <li>샌드위치</li>
+                  <li>랩 기타</li>
+                  <li>샐러드</li>
+                  <li>아침메뉴</li>
+                  <li>스마일 썹</li>
+                  <li>단체메뉴</li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="item">
             <div class="item__name">이용방법</div>
-            <div class="item__contents"></div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="content">
+                  <li>서브웨이 이용방법</li>
+                  <li>단체메뉴 이용방법</li>
+                  <li>신선한 재료 소개</li>
+                  <li>App 이용방법</li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="item">
             <div class="item__name">새소식</div>
-            <div class="item__contents"></div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="content">
+                  <li>이벤트 프로모션</li>
+                  <li>뉴스 공지사항</li>
+                  <li>광고영상</li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="item">
             <div class="item__name">써브웨이</div>
-            <div class="item__contents"></div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="content">
+                  <li>써브웨이 역사</li>
+                  <li>써브웨이 약속</li>
+                  <li>샌드위치 아틱스지원</li>
+                  <li>매장찾기</li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="item">
             <div class="item__name">가맹점</div>
-            <div class="item__contents"></div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="content">
+                  <li>써브웨이 프랜차이즈</li>
+                  <li>가맹관련 FAQ</li>
+                  <li>가맹신청 문의</li>
+                  <li>지사안내</li>
+                  <li>사업설명회</li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="item">
             <div class="item__name">온라인 주문</div>
-            <div class="item__contents"></div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="content">
+                  <li>FAST SUB</li>
+                  <li>HOME SUB</li>
+                  <li>단체주문</li>
+                </ul>
+              </div>
+            </div>
           </li>
-        </ul>
+        </ul> -->
+        <div id="lnb">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">메뉴소개</a>
+                <ul>
+                  <li><a href="#">샌드위치</a></li>
+                  <li><a href="#">랩기타</a></li>
+                  <li><a href="#">샐러드</a></li>
+                  <li><a href="#">아침메뉴</a></li>
+                  <li><a href="#">스마일썹</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">이용방법</a>
+                <ul>
+                  <li><a href="#">써브웨이 이용방법</a></li>
+                  <li><a href="#">단체메뉴 이용방법</a></li>
+                  <li><a href="#">신선한 재료 소개</a></li>
+                  <li><a href="#">App 이용방법</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">새소식</a>
+                <ul>
+                  <li><a href="#">이벤트 프로모션</a></li>
+                  <li><a href="#">뉴스 공지사항</a></li>
+                  <li><a href="#">광고영상</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">써브웨이</a>
+                <ul>
+                  <li><a href="#">써브웨이 역사</a></li>
+                  <li><a href="#">써브웨이 약속</a></li>
+                  <li><a href="#">샌드위치 아티스트 지원</a></li>
+                  <li><a href="#">매장찾기</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">가맹점</a>
+                <ul>
+                  <li><a href="#">써브웨이 프렌차이즈</a></li>
+                  <li><a href="#">가맹관련 FAQ</a></li>
+                  <li><a href="#">가맹신청 문의</a></li>
+                  <li><a href="#">지시안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">온라인 주문</a>
+                <ul>
+                  <li><a href="#">FAST SUB</a></li>
+                  <li><a href="#">HOME SUB</a></li>
+                  <li><a href="#">단체주문</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <div class="on"></div>
+          </div>
+        </div>
       </div>
     </header>
+
+    <!-- section -->
+    <section class="promotions">
+      <!-- <div class="content"> -->
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./image/banner__01.jpg" alt="배너1">
+              <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/banner__02.png" alt="배너2">
+              <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/banner__03.jpg" alt="배너3">
+              <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/banner__04.jpg" alt="배너4">
+              <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+            </div>
+            ...
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- navigation buttons -->
+          <div class="swiper-prev">
+            <div class="material-icons">arrow_back</div>
+          </div>
+          <div class="swiper-next">
+            <div class="material-icons">arrow_forward</div>
+
+          </div>
+          <!-- scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>        
+        <!-- </div> -->
+      </div>
+    </section>
   </body>
 </html>
