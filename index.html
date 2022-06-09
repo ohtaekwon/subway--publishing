@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SUBWAY</title>
+    <!-- JQUERY -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
@@ -19,26 +20,27 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-
+    <!-- SWIPER -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    
-    <!-- YOUTUBE JS -->
-    <script defer src="./js/youtube.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- MAIN.CSS -->
     <link rel="stylesheet" href="./main.css" />
-    <!-- MAIN.JS -->
+    <link rel="stylesheet" href="./common.css">
+    <!-- JS -->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/swiper.js"></script>
+    <script defer src="./js/floating.js"></script>
+    <script defer src="./js/search.js"></script>
+    <script defer src="./js/youtube.js"></script>
   </head>
   <body>
-    <a href="#content" class="skip">바로바기</a>
-
     <!-- HEADER -->
     <header>
       <div class="content">
         <a href="/" class="logo">
           <img src="./image/logo.png" alt="logo" />
         </a>
-
         <div class="sub-menu">
           <ul class="menu">
             <li>
@@ -56,87 +58,6 @@
             <div class="material-icons">search</div>
           </div>
         </div>
-        <!-- <ul class="main-menu">
-          <li class="item">
-            <div class="item__name">메뉴소개</div>
-            <div class="item__contents">
-              <div class="contents__menu">
-                <ul class="content">
-                  <li>샌드위치</li>
-                  <li>랩 기타</li>
-                  <li>샐러드</li>
-                  <li>아침메뉴</li>
-                  <li>스마일 썹</li>
-                  <li>단체메뉴</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item__name">이용방법</div>
-            <div class="item__contents">
-              <div class="contents__menu">
-                <ul class="content">
-                  <li>서브웨이 이용방법</li>
-                  <li>단체메뉴 이용방법</li>
-                  <li>신선한 재료 소개</li>
-                  <li>App 이용방법</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item__name">새소식</div>
-            <div class="item__contents">
-              <div class="contents__menu">
-                <ul class="content">
-                  <li>이벤트 프로모션</li>
-                  <li>뉴스 공지사항</li>
-                  <li>광고영상</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item__name">써브웨이</div>
-            <div class="item__contents">
-              <div class="contents__menu">
-                <ul class="content">
-                  <li>써브웨이 역사</li>
-                  <li>써브웨이 약속</li>
-                  <li>샌드위치 아틱스지원</li>
-                  <li>매장찾기</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item__name">가맹점</div>
-            <div class="item__contents">
-              <div class="contents__menu">
-                <ul class="content">
-                  <li>써브웨이 프랜차이즈</li>
-                  <li>가맹관련 FAQ</li>
-                  <li>가맹신청 문의</li>
-                  <li>지사안내</li>
-                  <li>사업설명회</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item__name">온라인 주문</div>
-            <div class="item__contents">
-              <div class="contents__menu">
-                <ul class="content">
-                  <li>FAST SUB</li>
-                  <li>HOME SUB</li>
-                  <li>단체주문</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul> -->
         <div id="lnb">
           <nav>
             <ul>
@@ -201,10 +122,8 @@
         </div>
       </div>
     </header>
-
-    <!-- section -->
+    <!-- PROMOTION -->
     <section class="promotions">
-      <!-- <div class="content"> -->
         <!-- Slider main container -->
         <div class="swiper-container">
           <!-- Additional required wrapper -->
@@ -236,16 +155,11 @@
           </div>
           <div class="swiper-next">
             <div class="material-icons">arrow_forward</div>
-
           </div>
-          <!-- scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
         </div>        
-        <!-- </div> -->
       </div>
     </section>
-
-    <!-- Quick menu -->
+    <!-- QUICK MENU -->
     <section class="quick__menu">
       <div class="content">
         <div class="menus">
@@ -269,13 +183,356 @@
     </div>
     <div class="youtube__cover"></div>
     <div class="content">
-      <!-- <img src="https://www.subway.co.kr/images/menu/sandwich_cl01_01.jpg" alt="Icon" class="floating floating1"/> -->
-      <!-- <img src="https://www.subway.co.kr/images/menu/sandwich_cl01_01.jpg" alt="Icon" class="floating floating2"/> -->
+      <img src="./image/float__01.jpg" alt="Icon" class="floating floating1"/>
+      <img src="./image/float__02.png" alt="Icon" class="floating floating2"/>
     </div>
   </section>
-    <section class="sub__menu">
-      
-      
+  <!-- SUBWAY MENU -->
+    <section class="subway__menu">
+      <div class="content">
+        <div class="menu__nav">
+          <div class="title">
+            <h4>Subway's Menu</h4>
+          </div>
+          <div class="tab">
+            <ul>
+              <li class="clasic">
+                <input type="button" value="클래식" onclick="addClassName()">
+              </li>
+              <li class="fresh">
+                <input type="button" value="프래쉬&라이트" onclick="">
+              </li>
+              <li class="premium">
+                <input type="button" value="프리미엄" onclick="">
+              </li>
+              <li class="morning">
+                <input type="button" value="아침메뉴" onclick="">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slide on">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Egg-Mayo_20211231094817112.png" alt="배너1">
+                <span class="title">에그마요</span>
+                <p class="text">
+                  부드러운 달걀과 고소한 마요네즈가 만나
+                  <br/>
+                  더 부드러운 스테디셀러
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Italian_B.M.T_20211231094910899.png" alt="배너2">
+                <span class="title">이탈리안 비엠티</span>
+                <p class="text">
+                  페퍼로니, 살라미 그리고 햄이 만들어내는
+                  최상의 조화! 
+                  <br/>
+                  전세계가 사랑하는 써브웨이의 베스트셀러! 
+                  Biggest Meatiest Tastiest, its’ B.M.T!                 
+                  <br/>
+                  더 부드러운 스테디셀러
+                </p>              
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/B.L.T_20211231094744175.png" alt="배너3">
+                <span class="title">비엘티</span>
+                <p class="text">
+                  오리지널 아메리칸 스타일 베이컨의<br/>
+                  풍미와 바삭함 그대로                
+                </p>              
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Meatball_20211231094946983.png" alt="배너4">
+                <span class="title">미트볼</span>
+                <p class="text">
+                  이탈리안 스타일 비프 미트볼에
+                  <br/>
+                  써브웨이만의 풍부한 토마토 향이 살아있는 마리나라소스를 듬뿍
+                </p>              
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/B.L.T_20211231094744175.png" alt="배너4">
+                <span class="title">햄</span>
+                <p class="text">
+                  기본 중에 기본!                  
+                  <br/>
+                  풍부한 햄이 만들어내는
+                  <br/>
+                  입 안 가득 넘치는 맛의 향연
+                </p>              
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">참치</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p>              
+            </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-prev">
+              <div class="material-icons">arrow_back</div>
+            </div>
+            <div class="swiper-next">
+              <div class="material-icons">arrow_forward</div>
+            </div>
+          </div>  
+        </div>   
+        <!-- FRESH -->
+        <div class="slide off">
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Rotisserie-Barbecue-Chicken_20211231023137878.png" alt="배너4">
+                <span class="title">로티세리 바비큐 치킨</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="subway.co.kr/upload/menu/Roasted-Chicken_20211231095032718.png" alt="배너4">
+                <span class="title">로스트 치킨</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">써브웨이 클럽</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">터키</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">베지</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-prev">
+              <div class="material-icons">arrow_back</div>
+            </div>
+            <div class="swiper-next">
+              <div class="material-icons">arrow_forward</div>
+            </div>
+          </div>  
+        </div>  
+        <!-- PREMIUM -->
+        <div class="slide off">
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">쉬림프</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">폴드 포크 바비큐</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">스테이크&치즈</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">터키 베이컨 아보카도</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">스파이시 이탈리안</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">치킨 데리야끼</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-prev">
+              <div class="material-icons">arrow_back</div>
+            </div>
+            <div class="swiper-next">
+              <div class="material-icons">arrow_forward</div>
+            </div>
+          </div>  
+        </div>
+        <!-- MORINING -->
+        <div class="slide off">
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">햄, 애그&치즈</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">웨스턴, 에그&치즈</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">베이컨, 에그&치즈</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.subway.co.kr/upload/menu/Tuna_20211231095535268.png" alt="배너4">
+                <span class="title">스테이크, 에그&치즈</span>
+                <p class="text">
+                  남녀노소 누구나 좋아하는
+                  <br/>
+                  담백한 참치와 고소한 마요네즈의 완벽환 조화
+                </p> 
+              </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-prev">
+              <div class="material-icons">arrow_back</div>
+            </div>
+            <div class="swiper-next">
+              <div class="material-icons">arrow_forward</div>
+            </div>
+          </div>  
+        </div>  
+      </div>
     </section>
+  <!-- SUBWAY ABOUT -->
+    <section class="subway__about">
+      <div class="content">
+        <div class="title">
+          <h4>Subway's Stroy</h4>
+        </div>
+        <div class="content--top">
+          <div class="utilization">
+            <p class="title">써브웨이를 <br/>제대로 즐기는 방법</p>
+            <!-- <div class="btn"></div> -->
+          </div>
+          <div class="history">
+            <p class="title">50년의 역사를 가진 No.1 프렌타이즈 성장기</p>
+            <div class="utilization--btn"></div>
+          </div>
+        </div>
+        <div class="content--bottom">
+          <div class="new">
+          
+          </div>
+          <div class="sponsor">
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="content">
+      <ul class="menu">
+        <li><a href="javasciprt:void(0)" class="green">개인정보처리방침</a></li>
+        <li><a href="javasciprt:void(0)">이용약관</a></li>
+        <li><a href="javasciprt:void(0)">써브카드</a></li>
+        <li><a href="javasciprt:void(0)">점주관리자</a></li>
+        <li><a href="javasciprt:void(0)">Subway Listens</a></li>
+      </ul>
+      <div class="btn-group">
+        <a href="javascript:void(0)" class="btn btn--white">찾아오시는길</a>
+        <a href="javascript:void(0)" class="btn btn--white">신규입점제의</a>
+        <a href="javascript:void(0)" class="btn btn--white">사이트 맵</a>
+      </div>
+      <div class="info">
+        <span>서울시 서초구 강남대로 535 프린스빌딩 15층 </span>
+        <span>대표 : 안명선</span>
+        <span>T전화 : 02-797-5036</span>
+        <span>사업자등록번호 : 101-84-04143</span>
+      </div>
+      <p class="copyright">
+        SUBWAY® is a Registered Trademark of Subway IP LLC. &copy;  <span class="this-year"></span> 
+        Subway IP LLC. All Rights Reserved.
+      </p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Subway_bi_%282002%29.svg" alt="SUBWAY LOGO" class="logo"/>
+    </div>
+  </footer>
+
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
   </body>
 </html>
