@@ -50,24 +50,48 @@ const morning = tabEl.querySelector(".morning");
 
 const slide = document.querySelectorAll(".slide");
 console.log(slide);
+console.log(slide[0]);
 // console.log(clasic);
 // console.log(fresh);
 
 const classList = [clasic, fresh, premium, morning];
 
 function addClassName(e) {
-  console.log(e);
+  if (e === "clasic") {
+    slide[1].classList.replace("on", "off");
+    slide[2].classList.replace("on", "off");
+    slide[3].classList.replace("on", "off");
+    // console.log(e);
+    if (slide[0].className === "slide off") {
+      slide[0].classList.replace("off", "on");
+    }
+    return;
+  } else if (e === "fresh") {
+    slide[0].classList.replace("on", "off");
+    slide[2].classList.replace("on", "off");
+    slide[3].classList.replace("on", "off");
+    // console.log(e);
+    if (slide[1].className === "slide off") {
+      slide[1].classList.replace("off", "on");
+    }
+    return;
+  } else if (e === "premium") {
+    slide[0].classList.replace("on", "off");
+    slide[1].classList.replace("on", "off");
+    slide[3].classList.replace("on", "off");
+    // console.log(e);
+    if (slide[2].className === "slide off") {
+      slide[2].classList.replace("off", "on");
+    }
+    return;
+  } else if (e === "morning") {
+    slide[0].classList.replace("on", "off");
+    slide[1].classList.replace("on", "off");
+    slide[2].classList.replace("on", "off");
+    // console.log(e);
+    if (slide[3].className === "slide off") {
+      slide[3].classList.replace("off", "on");
+    }
+    return;
+  }
 }
-if (slide) {
-  console.log(true);
-}
-// const slide = document.querySelectorAll(".slide");
-// console.log(slide[0]);
-// console.log(slide[1]);
-
-// clasic.addEventListener("click", () => {
-//   slide[0].className += "on";
-// });
-// clasic.addEventListener("blur", () => {
-//   slide[0].className += "off";
-// });
