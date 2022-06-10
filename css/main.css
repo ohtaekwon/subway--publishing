@@ -685,7 +685,7 @@ header #lnb nav > ul ul a:hover:after {
   right: 0;
   margin: auto;
 
-  z-index: 9;
+  z-index: 6;
 }
 .subway__menu .swiper-slide:hover span + p {
   display: none;
@@ -804,7 +804,7 @@ header #lnb nav > ul ul a:hover:after {
   bottom: 0;
   left: -680px;
   margin: auto;
-  z-index: 9;
+  z-index: 1;
   /* background-color: orange; */
 }
 .subway__about h4 {
