@@ -1,15 +1,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://app.netlify.com/sites/flamboyant-lumiere-482a1e/deploys)
 
-# ☕ STARBUCKS
+# SUBWAY
 
-스타벅스 랜딩 페이지(홈페이지)를 만드는 예제입니다. <br>
-꼭 ⬇ 아래 내용 모두 읽어보시고, ⬆ 완성된 코드도 확인해 보세요!
+SUBWYA 랜딩 페이지(홈페이지) 퍼블리싱입니다. <br>
 
 [master 브랜치로 이동](https://github.com/ohtaekwon/subway--publishing) <br/>
 
 [DEMO](https://subway-publishing.netlify.app/)<br/>
 
-![Subway](https://github.com/ohtaekwon/starbucks/blob/master/_assets/main_screenshot.jpg?raw=true)
+![Subway](https://raw.githubusercontent.com/ohtaekwon/subway--publishing/master/image/main.png)
 
 ## 문자 인코딩(Character Encoding) 설정
 
